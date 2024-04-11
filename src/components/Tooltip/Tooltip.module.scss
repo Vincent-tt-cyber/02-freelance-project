@@ -1,0 +1,45 @@
+@import "../../styles/base/vars";
+
+.tooltip {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+
+  transform: translate(-50%, -100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 0.86px solid rgba(255, 255, 255, 0.6);
+  border-radius: 36px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  &_box-1 {
+    background-color: var(--ui-accent);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+  &_box-2 {
+    background-color: var(--ui-biruza);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+  &_box-3 {
+    background-color: var(--ui-gray);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+}

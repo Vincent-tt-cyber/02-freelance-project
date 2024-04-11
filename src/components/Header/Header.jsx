@@ -3,10 +3,11 @@ import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 import CartIcon from "../../assets/icons/cart-icon.svg";
 import SearchForm from "../SearchForm/SearchForm";
+import Tooltip from "../Tooltip/Tooltip";
 
 const Header = () => {
   const [cartCount, setCartCount] = React.useState(0);
-
+  const [isOpenTooltip, setIsOpenTooltip] = React.useState(true);
   const links = [
     {
       id: 1,
@@ -63,10 +64,14 @@ const Header = () => {
           </div>
 
           <div className={styles["header__dot-sofa"]}>
-            <button className={styles["info-dot"]}>
+            <button
+              onClick={() => setIsOpenTooltip(!isOpenTooltip)}
+              className={styles["info-dot"]}
+            >
               <div className={styles["info-dot__radius"]}></div>
               <div className={styles["info-dot__circle"]}></div>
             </button>
+            {isOpenTooltip && <Tooltip />}
           </div>
 
           <div className={styles["header__dot-vase"]}>
@@ -74,6 +79,7 @@ const Header = () => {
               <div className={styles["info-dot__radius"]}></div>
               <div className={styles["info-dot__circle"]}></div>
             </button>
+            {/* {isOpenTooltip && <Tooltip />} */}
           </div>
 
           <div className={styles["header__dot-item"]}>
@@ -81,12 +87,15 @@ const Header = () => {
               <div className={styles["info-dot__radius"]}></div>
               <div className={styles["info-dot__circle"]}></div>
             </button>
+            {/* {isOpenTooltip && <Tooltip />} */}
           </div>
+
           <div className={styles["header__dot-wall"]}>
             <button className={styles["info-dot"]}>
               <div className={styles["info-dot__radius"]}></div>
               <div className={styles["info-dot__circle"]}></div>
             </button>
+            {/* {isOpenTooltip && <Tooltip />} */}
           </div>
         </div>
       </header>
