@@ -1,0 +1,15 @@
+@import './base/reset'; 
+@import './base/vars';
+
+
+body {
+  font-family: var(--font-main);
+  color: var(--textColor);
+}
+
+.container {
+
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
